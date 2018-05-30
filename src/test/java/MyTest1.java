@@ -21,13 +21,13 @@ public class MyTest1 {
         RestAssured.baseURI = "http://46.101.196.83/api";
         RequestSpecification request = RestAssured.given();
         request.headers("Content-Type", "application/x-www-form-urlencoded", "Authorization", "Basic YmV0MTE6YmV0MTE=");
-        request.contentType("application/x-www-form-urlencoded");
-        
-/*request.formParam("grant-type","password")
+
+
+request.formParam("grant_type","password")
                 .formParam("username", "coffe22@mailinator.com")
                 .formParam("platform", "ANDROID")
-                .formParam("password", "Qwe1156q"); */
-
+                .formParam("password", "Qwe1156q@@");
+//?grant_type=password&username=coffe22@mailinator.com&platform=ANDROID&password=Qwe1156q@@
         request.post("/oauth/token").prettyPrint();
 //System.out.println("Here you can find response\n"+response.body().prettyPeek());
 
