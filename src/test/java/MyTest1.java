@@ -26,7 +26,7 @@ public class MyTest1 {
 request.formParam("grant_type","password")
                 .formParam("username", "coffe22@mailinator.com")
                 .formParam("platform", "ANDROID")
-                .formParam("password", "Qwe1156q@@");
+                .formParam("password", "123");
 //?grant_type=password&username=coffe22@mailinator.com&platform=ANDROID&password=Qwe1156q@@
         request.post("/oauth/token").prettyPrint();
 //System.out.println("Here you can find response\n"+response.body().prettyPeek());
@@ -42,7 +42,7 @@ request.formParam("grant_type","password")
                 .formParam("grant-type", "password")
                 .formParam("username", "coffe22@mailinator.com")
                 .formParam("platform", "ANDROID")
-                .formParam("password", "Qwe1156q")
+                .formParam("password", "123")
                 .when().post()
 
                 .then().statusCode(200);
